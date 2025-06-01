@@ -77,7 +77,7 @@ def capture_calibration_images():
         elif key == ord('c') and ret_chess:
             # Save the image if a chess board is detected
             img_name = os.path.join(OUTPUT_DIRECTORY, f"calibration_{img_counter:02d}.png")
-            cv2.imwrite(, orig_frame)
+            cv2.imwrite(img_name, orig_frame)
             print(f"Captured {img_name}")
             
             img_counter += 1
